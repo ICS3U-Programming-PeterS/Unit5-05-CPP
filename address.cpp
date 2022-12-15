@@ -45,11 +45,11 @@ int main() {
     std::string userMailingAddress;
 
     // Asks user for their full name
-    std::cout << "Enter your full name (ex. Van Nguyen): ";
+    std::cout << "Enter your full name: ";
     std::getline(std::cin, userName);
 
     // Asks user if they live inside of an apartment
-    std::cout << "Do you live in an apartment? (y/n): ";
+    std::cout << "Do you live in an apartment? (y/n) ";
     std::getline(std::cin, userApartment);
 
     // Converts user's apartment answer to uppercase
@@ -59,28 +59,30 @@ int main() {
     // IF the user lives inside of an apartment
     if (userApartment == "Y") {
         // Asks user for their apartment number
-        std::cout << "Enter your apartment number (ex. 1A, 1B, 2B): ";
+        std::cout << "Enter your apartment number (ex. 1A, 2B): ";
         std::getline(std::cin, userApartmentNum);
     }
 
     // Asks user for their street number
-    std::cout << "Enter your street number: ";
+    std::cout << "Enter your street number : ";
     std::getline(std::cin, userStreetNum);
 
     // Asks user for their street
-    std::cout << "Enter your Street Name (ex. Clarence St, Cloudfield Lane): ";
+    std::cout << "Enter your street name AND type" <<
+    "(ex. Main St., Flower Cres., etc.): ";
     std::getline(std::cin, userStreetName);
 
     // Asks user for their city
-    std::cout << "Enter your City Name (ex. Toronto): ";
+    std::cout << "Enter your city: ";
     std::getline(std::cin, userCity);
 
     // Asks user for their province
-    std::cout << "Enter your province in abbreviated form (ex. ON, AL): ";
+    std::cout << "Enter your province "
+    << "(As an abbreviation, i.e. ON, AB, etc.): ";
     std::getline(std::cin, userProvince);
 
     // Asks user for their postal code
-    std::cout << "Enter your postal code (ex. K1S 0E7): ";
+    std::cout << "Enter your postal code (A1B 2C3): ";
     std::getline(std::cin, userPostalCode);
 
     // Calls function to format a canadian mailing address
@@ -89,6 +91,6 @@ int main() {
                                         userApartmentNum);
 
     // Displays to user their formatted
-    std::cout << "Your mailing address formatted: "
+    std::cout << "\nYour mailing address formatted: "
               << userMailingAddress << std::endl;
 }
